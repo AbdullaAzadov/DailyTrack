@@ -1,12 +1,75 @@
-# FSD + TS + React + Vite project template
+# Проект: Daily Tracker
 
-[![Feature-Sliced Design][shields-fsd-image]](https://feature-sliced.design/)
+## Описание проекта
 
-Based on official [Vite React Typescript template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts), but slightly changed to match [Feature-Sliced architectural methodology](https://feature-sliced.design/). Here's a list of differences
+Daily Tracker — это приложение для управления задачами, отслеживания прогресса и ведения дневника. Построено на основе современных технологий с использованием **Feature-Sliced Design (FSD)**, что обеспечивает модульность, читаемость и масштабируемость кода.
 
-- Clean and empty [`app root`](./src/app/)
-- Directories for minimal set of FSD slices
-- `src/` path alias for absolute import
-- Advanced [`.gitignore`](./.gitignore)
+---
 
-[shields-fsd-image]: https://img.shields.io/badge/Feature--Sliced-Design-FFFFFF?logoWidth=24&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMuNS41aDE3djJoLTE3di0yWm0wIDNoMTd2MmgtMTd2LTJabTAgM2g4djJoLTh2LTJabTAgM2gxN3YyaC0xN3YtMlptMCAzaDE3djJoLTE3di0yWm0wIDNoOHYyaC04di0yWm0wIDNoOHYyaC04di0yWm0wIDNoOHYyaC04di0yWiIvPjwvc3ZnPg==
+## Стек технологий
+
+### **Frontend**
+
+1. **React**  
+   - Используется для построения пользовательского интерфейса.
+   - **React Router v6** — маршрутизация и управление переходами между страницами.
+
+2. **Управление состоянием**
+   - **Zustand** — управление локальным состоянием компонентов.
+   - **React Query** — работа с удалённым состоянием (API-запросы, кэширование данных).
+
+3. **Стилизация**
+   - **Tailwind CSS** — утилитарный CSS-фреймворк для создания адаптивного дизайна.
+   - **ShadCN UI** — готовые UI-компоненты для ускорения разработки.
+
+4. **Тестирование**
+   - **Jest** — для написания юнит-тестов и проверки стабильности кода.
+
+5. **Методология**
+   - **Feature-Sliced Design (FSD)** — структурирование кода по слоям и фичам для упрощения поддержки и масштабирования.
+
+---
+
+### **Backend**
+
+1. **Firebase**
+   - Аутентификация.
+   - База данных (Firestore).
+   - Хостинг.
+   - Обработка API-запросов.
+
+---
+
+## Архитектура проекта
+
+Проект разделён на следующие слои:
+
+1. **App**  
+   Глобальная конфигурация приложения: провайдеры, роутинг.
+
+2. **Pages**  
+   Страницы приложения, составленные из фич и виджетов.
+
+3. **Widgets**  
+   Сложные интерфейсные блоки (например, хедер, сайдбар).
+
+4. **Features**  
+   Независимые функциональные модули (например, авторизация, добавление элемента).
+
+5. **Entities**  
+   Основные сущности приложения (например, пользователь, задача).
+
+6. **Shared**  
+   Переиспользуемые компоненты, утилиты, API-хелперы.
+
+---
+
+## Цели использования стека
+
+- **Zustand** и **React Query** — простое управление состоянием и удобная работа с API.
+- **Tailwind CSS** — быстрое создание адаптивного дизайна.
+- **ShadCN UI** — ускорение разработки с помощью готовых UI-компонентов.
+- **Feature-Sliced Design** — упрощение поддержки и масштабирования.
+- **Firebase** — простота в интеграции серверной логики и баз данных.
+
+---
